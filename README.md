@@ -293,8 +293,136 @@ mais pour **éveiller, corriger et transformer**.
 
 ---
 
-🔥 Si tu veux aller au niveau expert :
+---
 
-* ✅ Transformer ces **120 causes en plan d’action concret**
-* ✅ Construire une **feuille de route stratégique (1 an / 3 ans / 10 ans)**
-* ✅ Créer un **dashboard personnel (KPI + suivi hebdomadaire)**
+# 🧠 **21 sagesses puissantes sur la pauvreté et la richesse**
+
+1. 👉 La pauvreté commence dans l’esprit avant d’apparaître dans le portefeuille
+2. 👉 Ce que tu répètes chaque jour construit ta réalité financière
+3. 👉 La discipline bat toujours la motivation
+4. 👉 L’argent amplifie ce que tu es déjà
+5. 👉 Sans vision, même les opportunités deviennent invisibles
+6. 👉 Celui qui ne sait pas gérer 10 ne saura pas gérer 1 000
+7. 👉 Le mauvais entourage coûte plus cher que l’ignorance
+8. 👉 Ce n’est pas le manque d’argent, mais le manque de stratégie qui bloque
+9. 👉 La richesse durable est lente, la pauvreté peut être rapide
+10. 👉 Apprendre sans appliquer est une illusion de progrès
+11. 👉 Les petites dépenses répétées créent les grandes difficultés
+12. 👉 Le silence protège les projets, le bruit les affaiblit
+13. 👉 La constance transforme les faibles efforts en résultats puissants
+14. 👉 Ne pas investir en soi est la pire perte
+15. 👉 Les opportunités viennent souvent déguisées en problèmes
+16. 👉 L’humilité ouvre des portes que l’orgueil ferme
+17. 👉 La gratitude attire plus que la plainte
+18. 👉 Une mauvaise décision répétée devient une habitude dangereuse
+19. 👉 Le temps mal utilisé est une richesse perdue
+20. 👉 Les systèmes battent les efforts isolés
+21. 👉 La baraka multiplie ce que les efforts seuls ne peuvent atteindre
+
+---
+
+# 🔁 **10 REX (retours d’expérience) + Tips + Bonnes pratiques**
+
+---
+
+## 1. 💸 REX : “Je gagne bien, mais je finis toujours à zéro”
+
+👉 Problème : absence de gestion financière
+✅ Tip : applique une règle simple (50/30/20 ou 60/20/20)
+✅ Bonne pratique : automatiser épargne + suivi mensuel
+
+---
+
+## 2. ⏳ REX : “Je n’ai jamais le temps”
+
+👉 Problème : mauvaise gestion du temps
+✅ Tip : planifie ta journée la veille
+✅ Bonne pratique : 3 priorités max / jour
+
+---
+
+## 3. 📉 REX : “J’ai échoué donc j’arrête”
+
+👉 Problème : mauvaise lecture de l’échec
+✅ Tip : transformer chaque échec en leçon (REX écrit)
+✅ Bonne pratique : journal d’apprentissage hebdomadaire
+
+---
+
+## 4. 🤝 REX : “Je suis entouré mais je n’avance pas”
+
+👉 Problème : mauvais entourage
+✅ Tip : auditer tes 5 proches
+✅ Bonne pratique : chercher 1 mentor + 1 groupe ambitieux
+
+---
+
+## 5. 📚 REX : “Je consomme du contenu mais rien ne change”
+
+👉 Problème : accumulation sans action
+✅ Tip : 1 apprentissage = 1 action immédiate
+✅ Bonne pratique : règle 70% action / 30% théorie
+
+---
+
+## 6. 💼 REX : “Mon business ne décolle pas”
+
+👉 Problème : manque de compétences business
+✅ Tip : apprendre vendre + marketing + finance
+✅ Bonne pratique : travailler sur un seul produit rentable
+
+---
+
+## 7. 🔁 REX : “Je recommence toujours à zéro”
+
+👉 Problème : absence de système
+✅ Tip : documenter et automatiser
+✅ Bonne pratique : créer des routines + checklists
+
+---
+
+## 8. 🗣️ REX : “Je parle beaucoup de mes projets mais rien n’aboutit”
+
+👉 Problème : dispersion d’énergie
+✅ Tip : parler peu, agir beaucoup
+✅ Bonne pratique : partager uniquement après résultats
+
+---
+
+## 9. ⚡ REX : “Je veux aller vite, mais je stagne”
+
+👉 Problème : impatience stratégique
+✅ Tip : penser long terme (3-5 ans)
+✅ Bonne pratique : mesurer progrès mensuel, pas quotidien
+
+---
+
+## 10. 🕋 REX : “Je travaille dur mais sans bénédiction”
+
+👉 Problème : déséquilibre spirituel
+✅ Tip : renforcer gratitude + istighfar + sadaqa
+✅ Bonne pratique : routine spirituelle quotidienne
+
+---
+
+# 🧠 **MÉMO FINAL**
+
+👉 Pensée → Actions → Habitudes → Résultats
+👉 Systèmes > Motivation
+👉 Discipline + Stratégie + Baraka = Transformation
+
+---
+
+# ⚖️ **CONCLUSION**
+
+👉 Les sagesses te donnent la **vision**
+👉 Les REX te donnent la **réalité terrain**
+👉 Les tips te donnent le **passage à l’action**
+
+---
+
+🔥 Si tu veux aller encore plus loin :
+
+* ✅ Transformer ça en **plan d’action 30 / 60 / 90 jours**
+* ✅ Créer un **tableau de suivi personnel (KPI + discipline)**
+* ✅ Ou une **mind map visuelle ultra claire**
