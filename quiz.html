@@ -1,5 +1,3 @@
-This is a complete, ready-to-run HTML document that generates an interactive 50-question quiz based on your document about poverty causes, adapted to the Ivorian context with detailed explanations and practical advice.
-```html
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -14,9 +12,9 @@ This is a complete, ready-to-run HTML document that generates an interactive 50-
     
     <style>
         :root {
-            --primary: #2b7a4b;      /* richesse, croissance */
+            --primary: #2b7a4b;
             --primary-dark: #1e5a38;
-            --secondary: #f3b33d;    /* baraka, lumière */
+            --secondary: #f3b33d;
             --accent: #e76f51;
             --mindset: #3b82f6;
             --finance: #10b981;
@@ -228,7 +226,6 @@ This is a complete, ready-to-run HTML document that generates an interactive 50-
     
     <!-- Quiz principal -->
     <div class="quiz-panel" id="quizPanel">
-        <!-- Ecran de démarrage (optionnel mais simple: on affiche directement le quiz) -->
         <div id="quizActive">
             <div class="progress-section">
                 <div class="d-flex justify-content-between mb-2">
@@ -296,84 +293,92 @@ This is a complete, ready-to-run HTML document that generates an interactive 50-
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-    // ---------- 50 QUESTIONS PRATIQUES ADAPTÉES COTE D'IVOIRE ----------
-    // Thématiques : Mentalité, Finances, Compétences, Relations, Spiritualité, Organisation, Santé
+    // --------------------------------------------------------------
+    // BANQUE DE 50 QUESTIONS CORRIGÉES (basées sur les causes profondes)
+    // Chaque question : thématique, texte, 4 options, bonne réponse, explication détaillée, conseil
+    // --------------------------------------------------------------
     const QUESTIONS = [
-        { thematic: "Mentalité", question: "Koffi, vendeur de pagnes à Abidjan, gagne 200 000 FCFA par mois. Chaque fois qu’il a de l’argent, il dépense tout en sorties et habits de marque sans jamais épargner. Il rêve d’ouvrir sa boutique mais ne passe jamais à l’action. Quelle est la cause racine de sa stagnation ?", options: ["Manque de discipline et vision court terme", "Mauvais emplacement de vente", "Absence de clientèle", "Prix trop bas"], correct: "Manque de discipline et vision court terme", explanation: "Définition : la discipline financière et la vision long terme permettent de transformer les revenus en capital. Koffi subit le syndrome 'chap chap' (gain immédiat). REX : des commerçants du marché de Treichville ont changé leur situation en adoptant la règle 50/30/20. Tip : commencez par épargner 10% dès réception du revenu, avant toute dépense.", tip: "Appliquez la règle : avant de sortir, mettez de côté pour l'investissement. La pauvreté n'est pas un manque d'argent, mais un manque de stratégie." },
-        { thematic: "Mentalité", question: "Aminata, jeune diplômée à Bouaké, refuse de postuler à des emplois qu'elle juge 'trop simples' (vente, assistanat). Elle attend l'opportunité parfaite depuis 18 mois. Quel comportement la bloque ?", options: ["Peur de l'échec et orgueil", "Manque de CV", "Absence de diplômes", "Mauvaise ville"], correct: "Peur de l'échec et orgueil", explanation: "L'orgueil et la peur du jugement empêchent de sortir de sa zone de confort. Selon la sagesse n°16 : 'L'humilité ouvre des portes que l'orgueil ferme'. REX : beaucoup d'entrepreneurs à succès ont commencé par des petits métiers pour financer leurs rêves.", tip: "Acceptez les jobs alimentaires pour construire votre réseau et capital. L'action imparfaite vaut mieux que la perfection inactive." },
-        { thematic: "Mentalité", question: "Issa à Yopougon se décourage dès qu'une difficulté apparaît. Il a lancé 3 petites activités (fritures, call box) mais abandonne après 2 semaines faute de clients immédiats. Quelle est son erreur principale ?", options: ["Manque de patience stratégique", "Mauvais produit", "Mauvais emplacement", "Trop de concurrence"], correct: "Manque de patience stratégique", explanation: "La patience stratégique est essentielle. Une activité met 3 à 6 mois à décoller. REX : le réseau de vente de glaces à Port-Bouët a mis 4 mois avant d'être rentable. Abandonner tôt est une cause profonde de pauvreté.", tip: "Fixez-vous un objectif de persévérance de 90 jours avant d'évaluer. La constance transforme les faibles efforts en résultats puissants." },
+        // 1-10 : Mentalité & Finances
+        { thematic: "Mentalité", question: "Koffi, vendeur de pagnes à Abidjan, gagne 200 000 FCFA par mois. Chaque fois qu’il a de l’argent, il dépense tout en sorties et habits de marque sans jamais épargner. Il rêve d’ouvrir sa boutique mais ne passe jamais à l’action. Quelle est la cause racine de sa stagnation ?", options: ["Manque de discipline et vision court terme", "Mauvais emplacement de vente", "Absence de clientèle", "Prix trop bas"], correct: "Manque de discipline et vision court terme", explanation: "Définition : la discipline financière et la vision long terme permettent de transformer les revenus en capital. Koffi subit le syndrome 'chap chap' (gain immédiat). REX : des commerçants du marché de Treichville ont changé leur situation en adoptant la règle 50/30/20.", tip: "Appliquez la règle : avant de sortir, mettez de côté pour l'investissement. La pauvreté n'est pas un manque d'argent, mais un manque de stratégie." },
+        { thematic: "Mentalité", question: "Aminata, jeune diplômée à Bouaké, refuse de postuler à des emplois qu'elle juge 'trop simples' (vente, assistanat). Elle attend l'opportunité parfaite depuis 18 mois. Quel comportement la bloque ?", options: ["Peur de l'échec et orgueil", "Manque de CV", "Absence de diplômes", "Mauvaise ville"], correct: "Peur de l'échec et orgueil", explanation: "L'orgueil et la peur du jugement empêchent de sortir de sa zone de confort. Sagesse n°16 : 'L'humilité ouvre des portes que l'orgueil ferme'. REX : beaucoup d'entrepreneurs à succès ont commencé par des petits métiers.", tip: "Acceptez les jobs alimentaires pour construire votre réseau et capital. L'action imparfaite vaut mieux que la perfection inactive." },
+        { thematic: "Mentalité", question: "Issa à Yopougon se décourage dès qu'une difficulté apparaît. Il a lancé 3 petites activités (fritures, call box) mais abandonne après 2 semaines faute de clients immédiats. Quelle est son erreur principale ?", options: ["Manque de patience stratégique", "Mauvais produit", "Mauvais emplacement", "Trop de concurrence"], correct: "Manque de patience stratégique", explanation: "La patience stratégique est essentielle. Une activité met 3 à 6 mois à décoller. REX : le réseau de vente de glaces à Port-Bouët a mis 4 mois avant d'être rentable.", tip: "Fixez-vous un objectif de persévérance de 90 jours avant d'évaluer. La constance transforme les faibles efforts en résultats puissants." },
         { thematic: "Finances", question: "Clarisse à Daloa a un revenu mensuel de 250 000 FCFA mais des dettes d'achats à crédit (téléphone, TV) représentent 70% de ses charges. Elle n'a aucun fonds d'urgence. Quel est son problème central ?", options: ["Mauvaise gestion des dettes et absence d'épargne", "Revenu trop faible", "Trop de dépenses contraintes", "Mauvaise santé"], correct: "Mauvaise gestion des dettes et absence d'épargne", explanation: "Les dettes à la consommation tuent le pouvoir d'achat. Sagesse n°11 : les petites dépenses répétées créent les grandes difficultés. REX : un commerçant à San Pedro a consolidé ses dettes, négocié un échéancier et libéré 40% de ses revenus.", tip: "Utilisez la méthode boule de neige : remboursez la plus petite dette d'abord, puis réinvestissez." },
-        { thematic: "Finances", question: "Moussa, coiffeur à Korhogo, met toute sa réserve dans l'achat de nouveaux produits chaque mois mais ne tient aucune comptabilité. Il ignore son bénéfice réel. Quelle lacune stratégique ?", options: ["Absence de suivi financier (KPI)", "Manque de clients", "Mauvais prix", "Mauvaise localisation"], correct: "Absence de suivi financier (KPI)", explanation: "Sans indicateurs de performance, on navigue à l'aveugle. La confusion entre chiffre d'affaires et bénéfice est fréquente. REX : après avoir installé un simple cahier de caisse, un barbier d'Abobo a augmenté sa marge de 30% en réduisant les achats superflus.", tip: "Chaque semaine, notez vos entrées/sorties. 15 minutes suffisent." },
-        { thematic: "Compétences", question: "Awa travaille dans la vente de cosmétiques mais ne maîtrise pas les réseaux sociaux ni les techniques de vente en ligne. Ses concurrents vendent via WhatsApp et Instagram. Son chiffre stagne. Que lui manque-t-il ?", options: ["Culture digitale et compétences marketing", "Stock", "Fournisseur", "Local"], correct: "Culture digitale et compétences marketing", explanation: "L'absence de compétences utiles au marché moderne isole. 80% des transactions à Abidjan se préparent en ligne. REX : une vendeuse de tissus à Marcory a suivi une formation gratuite sur le marketing digital et doublé ses commandes en 3 mois.", tip: "Apprenez une compétence numérique tous les mois (Canva, Facebook Ads, gestion de caisse)." },
-        { thematic: "Compétences", question: "Fadiga, mécanicien auto à Yamoussoukro, refuse d'apprendre les nouvelles motorisations (électronique). Il perd des clients au profit de jeunes formés. Quelle erreur ?", options: ["Refus de se former en continu", "Manque d'outils", "Paresse physique", "Mauvais entourage"], correct: "Refus de se former en continu", explanation: "Le monde change : sans veille technologique, on devient obsolète. La cause n°42 : ne pas se former en continu. REX : un garagiste à Bouaké a suivi des cours en ligne gratuits sur l'injection électronique et a retrouvé une clientèle premium.", tip: "Consacrez 2h par semaine à l'apprentissage (YouTube, mentorat, lectures)." },
-        { thematic: "Relations", question: "Nadia fréquente un groupe d'amies qui critiquent le travail et préfèrent les 'bienfaiteurs'. Elle a perdu sa motivation à entreprendre. Quel impact négatif ?", options: ["Mauvais entourage destructeur", "Manque de talents", "Problème familial", "Absence d'argent"], correct: "Mauvais entourage destructeur", explanation: "Les 5 personnes les plus proches influencent votre destin. La cause n°60 : mauvais entourage. REX : une couturière à Port-Bouët a changé de cercle, rejoint une association de femmes ambitieuses et multiplié ses revenus par 3.", tip: "Auditez votre entourage : qui vous tire vers le haut ? Éloignez-vous des pessimistes chroniques." },
+        { thematic: "Finances", question: "Moussa, coiffeur à Korhogo, met toute sa réserve dans l'achat de nouveaux produits chaque mois mais ne tient aucune comptabilité. Il ignore son bénéfice réel. Quelle lacune stratégique ?", options: ["Absence de suivi financier (KPI)", "Manque de clients", "Mauvais prix", "Mauvaise localisation"], correct: "Absence de suivi financier (KPI)", explanation: "Sans indicateurs de performance, on navigue à l'aveugle. La confusion entre chiffre d'affaires et bénéfice est fréquente. REX : après avoir installé un simple cahier de caisse, un barbier d'Abobo a augmenté sa marge de 30%.", tip: "Chaque semaine, notez vos entrées/sorties. 15 minutes suffisent." },
+        { thematic: "Compétences", question: "Awa travaille dans la vente de cosmétiques mais ne maîtrise pas les réseaux sociaux ni les techniques de vente en ligne. Ses concurrents vendent via WhatsApp et Instagram. Son chiffre stagne. Que lui manque-t-il ?", options: ["Culture digitale et compétences marketing", "Stock", "Fournisseur", "Local"], correct: "Culture digitale et compétences marketing", explanation: "L'absence de compétences utiles au marché moderne isole. 80% des transactions à Abidjan se préparent en ligne. REX : une vendeuse de tissus à Marcory a suivi une formation gratuite sur le marketing digital et doublé ses commandes.", tip: "Apprenez une compétence numérique tous les mois (Canva, Facebook Ads, gestion de caisse)." },
+        { thematic: "Compétences", question: "Fadiga, mécanicien auto à Yamoussoukro, refuse d'apprendre les nouvelles motorisations (électronique). Il perd des clients au profit de jeunes formés. Quelle erreur ?", options: ["Refus de se former en continu", "Manque d'outils", "Paresse physique", "Mauvais entourage"], correct: "Refus de se former en continu", explanation: "Le monde change : sans veille technologique, on devient obsolète. Cause n°42 : ne pas se former en continu. REX : un garagiste à Bouaké a suivi des cours en ligne gratuits sur l'injection électronique et a retrouvé une clientèle premium.", tip: "Consacrez 2h par semaine à l'apprentissage (YouTube, mentorat, lectures)." },
+        { thematic: "Relations", question: "Nadia fréquente un groupe d'amies qui critiquent le travail et préfèrent les 'bienfaiteurs'. Elle a perdu sa motivation à entreprendre. Quel impact négatif ?", options: ["Mauvais entourage destructeur", "Manque de talents", "Problème familial", "Absence d'argent"], correct: "Mauvais entourage destructeur", explanation: "Les 5 personnes les plus proches influencent votre destin. Cause n°60 : mauvais entourage. REX : une couturière à Port-Bouët a changé de cercle, rejoint une association de femmes ambitieuses et multiplié ses revenus par 3.", tip: "Auditez votre entourage : qui vous tire vers le haut ? Éloignez-vous des pessimistes chroniques." },
         { thematic: "Relations", question: "Marc, jeune informaticien, ne participe à aucun événement tech à Abidjan. Il cherche un emploi seul. Quelle carence sociale ?", options: ["Manque de réseau (networking)", "Mauvais CV", "Absence de diplômes", "Trop de concurrence"], correct: "Manque de réseau (networking)", explanation: "70% des opportunités ne sont pas publiées. Le réseautage ouvre des portes invisibles. REX : un développeur à Cocody a trouvé son job après un meetup grâce à une recommandation directe.", tip: "Allez à 2 événements professionnels par mois. Échangez au moins 3 contacts à chaque fois." },
-        { thematic: "Spiritualité", question: "Bintou, commerçante, travaille dur mais sent que ses ventes ne sont pas bénies. Elle ne fait jamais de charité, ne remercie pas Dieu pour les petites victoires. Que néglige-t-elle ?", options: ["Absence de gratitude et de sadaqa (aumône)", "Manque d'effort", "Mauvaise qualité", "Prix trop haut"], correct: "Absence de gratitude et de sadaqa (aumône)", explanation: "La baraka (bénédiction) vient de la reconnaissance envers Allah et du partage. La cause n°96 : négliger les causes de bénédiction. REX : une poissonnière à Abidjan a augmenté sa clientèle après avoir commencé à donner une petite part de ses bénéfices.", tip: "Chaque jour, dites 'Alhamdoulilah' pour ce que vous avez. Donnez ne serait-ce que 100 FCFA. La baraka multiplie les efforts." },
+        { thematic: "Spiritualité", question: "Bintou, commerçante, travaille dur mais sent que ses ventes ne sont pas bénies. Elle ne fait jamais de charité, ne remercie pas Dieu pour les petites victoires. Que néglige-t-elle ?", options: ["Absence de gratitude et de sadaqa (aumône)", "Manque d'effort", "Mauvaise qualité", "Prix trop haut"], correct: "Absence de gratitude et de sadaqa (aumône)", explanation: "La baraka (bénédiction) vient de la reconnaissance envers Allah et du partage. Cause n°96 : négliger les causes de bénédiction. REX : une poissonnière à Abidjan a augmenté sa clientèle après avoir commencé à donner une petite part de ses bénéfices.", tip: "Chaque jour, dites 'Alhamdoulilah' pour ce que vous avez. Donnez ne serait-ce que 100 FCFA. La baraka multiplie les efforts." },
+        // On continue avec 11 à 20 (synthèse d'après extraQuestions et additionalScenarios)
         { thematic: "Spiritualité", question: "Sékou, agriculteur près de Man, se plaint de la sécheresse mais ne fait jamais d'istighfar (demande de pardon) ni de doua pour ses récoltes. Selon les sagesses, quel levier active-t-il ?", options: ["Négligence du repentir et du tawakkul", "Manque d'engrais", "Mauvaise terre", "Mauvais semis"], correct: "Négligence du repentir et du tawakkul", explanation: "Istighfar attire les bénédictions matérielles. Proverbe : 'Celui qui se repent, Allah lui ouvre les portes de la subsistance'. REX : dans plusieurs villages, des agriculteurs ont augmenté leurs rendements après des séances de doua collective.", tip: "Récitez 'Astaghfirullah' 100 fois par jour. Le repentir purifie l'argent et la terre." },
-        { thematic: "Organisation", question: "Franck a un petit business de livraison. Il n'a pas d'horaire fixe, pas de système de suivi des commandes. Il oublie souvent des clients. Quel est son talon d'Achille ?", options: ["Absence de système et de processus", "Manque de carburant", "Mauvais véhicule", "Faible prix"], correct: "Absence de système et de processus", explanation: "Sans système, on dépend de l'effort manuel et on stagne. La cause n°103 : absence de système. REX : un livreur à Adjamé a adopté un simple carnet de commandes et des checklists, réduisant les erreurs de 70%.", tip: "Documentez vos routines : to do list, planning client, relances automatiques." },
-        { thematic: "Santé", question: "Georges se lève à 11h chaque jour, se couche tard devant les séries. Il manque d'énergie pour développer son activité de coiffeur. Quel mauvais pli ?", options: ["Trop dormir / mauvaise hygiène de vie", "Manque d'ambition", "Mauvaise formation", "Absence de matériel"], correct: "Trop dormir / mauvaise hygiène de vie", explanation: "Le sommeil excessif et le déséquilibre tuent la productivité. La cause n°112. REX : un boulanger à Grand-Bassam a augmenté sa production de 40% après avoir régularisé ses horaires (lever 5h).", tip: "Couchez-vous avant 23h, levez-vous au plus tard à 6h. L'énergie du matin est une richesse." },
-        // Pour atteindre 50 questions, nous générons un ensemble riche en s'inspirant du contenu .md
-    ];
-    
-    // Complétons jusqu'à 50 questions en ajoutant des cas variés basés sur les causes profondes.
-    const extraQuestions = [
+        { thematic: "Organisation", question: "Franck a un petit business de livraison. Il n'a pas d'horaire fixe, pas de système de suivi des commandes. Il oublie souvent des clients. Quel est son talon d'Achille ?", options: ["Absence de système et de processus", "Manque de carburant", "Mauvais véhicule", "Faible prix"], correct: "Absence de système et de processus", explanation: "Sans système, on dépend de l'effort manuel et on stagne. Cause n°103 : absence de système. REX : un livreur à Adjamé a adopté un simple carnet de commandes et des checklists, réduisant les erreurs de 70%.", tip: "Documentez vos routines : to do list, planning client, relances automatiques." },
+        { thematic: "Santé", question: "Georges se lève à 11h chaque jour, se couche tard devant les séries. Il manque d'énergie pour développer son activité de coiffeur. Quel mauvais pli ?", options: ["Trop dormir / mauvaise hygiène de vie", "Manque d'ambition", "Mauvaise formation", "Absence de matériel"], correct: "Trop dormir / mauvaise hygiène de vie", explanation: "Le sommeil excessif et le déséquilibre tuent la productivité. Cause n°112. REX : un boulanger à Grand-Bassam a augmenté sa production de 40% après avoir régularisé ses horaires (lever 5h).", tip: "Couchez-vous avant 23h, levez-vous au plus tard à 6h. L'énergie du matin est une richesse." },
         { thematic: "Finances", question: "Angèle a un crédit revolving pour des téléphones et de l'habillement. Chaque mois, elle rembourse 80 000 FCFA avec un taux d'intérêt élevé. Son salaire est 180 000 FCFA. Que devrait-elle prioriser ?", options: ["Refinancer et consolider ses dettes", "Emprunter plus", "Changer de travail", "Arrêter de payer"], correct: "Refinancer et consolider ses dettes", explanation: "Les dettes à la consommation sont un piège. REX : une employée de bureau a négocié un rééchelonnement sans intérêts auprès de la coopérative.", tip: "Consultez une mutuelle d'épargne pour regrouper vos crédits." },
         { thematic: "Mentalité", question: "Yao pense qu'il est 'trop vieux' pour apprendre le e-commerce à 45 ans. Il refuse toute formation numérique. Quel blocage ?", options: ["Refus d'apprendre / mentalité fixe", "Manque de matériel", "Âge avancé", "Concurrence"], correct: "Refus d'apprendre / mentalité fixe", explanation: "La croissance ne connaît pas d'âge. Sagesse n°14: absence de créativité et innovation. REX : une dame de 52 ans à Abidjan a commencé la vente en ligne de condiments et gagne mieux qu'avant.", tip: "L'état d'esprit de croissance : 'je ne sais pas encore, mais j'apprends'." },
         { thematic: "Spiritualité", question: "Habib gagne bien mais tout son argent part sans bénédiction. Il ne prie pas régulièrement, ne donne pas de zakat. Quel concept clé ignore-t-il ?", options: ["Baraka et taqwa (crainte d'Allah)", "Trop de dépenses", "Investissements risqués", "Mauvaise gestion"], correct: "Baraka et taqwa (crainte d'Allah)", explanation: "La baraka dépend du respect des prescriptions. Cause n°92 : négliger sa spiritualité. REX : après avoir régularisé ses prières, un commerçant a vu ses bénéfices augmenter sans changer ses prix.", tip: "Associez intention (niyyah) et travail. Accomplissez vos obligations religieuses." },
         { thematic: "Relations", question: "Roseline a un associé malhonnête qui détourne l'argent caisse. Elle subit mais ne le dénonce pas. Son entreprise coule. Quelle faute stratégique ?", options: ["Mauvais choix d'associé / manque d'intégrité", "Manque de ventes", "Localisation", "Marketing"], correct: "Mauvais choix d'associé / manque d'intégrité", explanation: "Les mauvais partenaires détruisent plus que l'ignorance. Cause n°66. REX : une boutique à Treichville a changé d'associé et repris sa croissance.", tip: "Choisissez des associés avec des valeurs claires, faites un contrat simple." },
         { thematic: "Compétences", question: "Chantal vend des beignets, mais elle ne calcule jamais son coût de revient. Elle pense faire des bénéfices alors qu'elle perd de l'argent. Quel savoir lui manque ?", options: ["Bases en comptabilité simple", "Recette de cuisine", "Emplacement", "Réputation"], correct: "Bases en comptabilité simple", explanation: "Savoir calculer le coût unitaire est fondamental. Cause n°53 : absence de bases en comptabilité. REX : après avoir utilisé une fiche excel, une vendeuse a augmenté ses marges de 25%.", tip: "Noter : prix ingrédients + temps + énergie = prix de vente minimum." },
         { thematic: "Organisation", question: "Kouadio envoie des SMS à la main pour ses commandes, perd beaucoup de temps et oublie des clients. Que lui conseiller ?", options: ["Mettre en place un système simple (carnet ou Excel)", "Embaucher quelqu'un", "Fermer l'activité", "Augmenter les prix"], correct: "Mettre en place un système simple (carnet ou Excel)", explanation: "Un système standardisé évite la perte d'énergie. REX : un livreur a digitalisé ses commandes avec Google Forms, gagnant 2h par jour.", tip: "Utilisez des outils low-tech : tableur, checklist imprimée." },
-    ];
-    
-    // Fusion et construction de 50 questions distinctes (en combinant)
-    let allQuestions = [...QUESTIONS];
-    allQuestions.push(...extraQuestions);
-    // Ajout de questions variées pour arriver pile à 50 (on va en générer jusqu'à 50)
-    const themesList = ["Mentalité","Finances","Compétences","Relations","Spiritualité","Organisation","Santé"];
-    const additionalScenarios = [
         { thematic: "Mentalité", question: "Patrice procrastine toujours ses démarches administratives pour obtenir sa patente. Il perd des marchés publics faute de documents. Quelle habitude le dessert ?", options: ["Procrastination", "Manque d'argent", "Mauvais entourage", "Absence de logiciel"], correct: "Procrastination", explanation: "Remettre à demain tue les opportunités. REX : un prestataire a débloqué 3 contrats après avoir centralisé ses papiers en 2 jours.", tip: "Faites la tâche désagréable en premier le matin." },
+        // 21-30
         { thematic: "Finances", question: "Raoul ne suit pas ses dépenses, il finit le mois à découvert malgré 300k FCFA. Quelle règle simple pourrait l'aider ?", options: ["Règle 50/30/20 (budget)", "Travailler plus", "Changer de ville", "Économiser sur la nourriture"], correct: "Règle 50/30/20 (budget)", explanation: "Cette règle : 50% besoins, 30% envies, 20% épargne. REX : à Adjamé, un agent a équilibré ses comptes en appliquant cette méthode.", tip: "Automatisez le virement d'épargne dès réception du salaire." },
         { thematic: "Compétences", question: "Yvette ne sait pas vendre son produit. Elle bégaye face aux clients et ne connaît pas les techniques de closing. Quel levier doit-elle développer ?", options: ["Compétences en vente et soft skills", "Achat de stock", "Embaucher un commercial", "Baisser les prix"], correct: "Compétences en vente et soft skills", explanation: "La vente est le cœur de toute activité. Cause n°56 : ne pas apprendre à vendre. REX : une vendeuse de chaussures a suivi une formation gratuite YouTube et doublé ses ventes.", tip: "Pratiquez votre pitch devant un miroir 5 minutes par jour." },
-        { thematic: "Spiritualité", question: "Mariam accumule les rancunes envers ses clients, elle ne sourit plus et perd sa clientèle. Quel comportement spirituel lui manque ?", options: ["Absence de gratitude et maîtrise de la langue", "Manque de produit", "Mauvais prix", "Concurrence"], correct: "Absence de gratitude et maîtrise de la langue", explanation: "La gratitude attire la clientèle. REX : une commerçante à Port-Bouët a noté chaque soir 3 motifs de gratitude ; son chiffre a grimpé.", tip: "Remerciez vos clients, même mentalement. La bonne parole est une baraka." }
+        { thematic: "Spiritualité", question: "Mariam accumule les rancunes envers ses clients, elle ne sourit plus et perd sa clientèle. Quel comportement spirituel lui manque ?", options: ["Absence de gratitude et maîtrise de la langue", "Manque de produit", "Mauvais prix", "Concurrence"], correct: "Absence de gratitude et maîtrise de la langue", explanation: "La gratitude attire la clientèle. REX : une commerçante à Port-Bouët a noté chaque soir 3 motifs de gratitude ; son chiffre a grimpé.", tip: "Remerciez vos clients, même mentalement. La bonne parole est une baraka." },
+        { thematic: "Valeurs", question: "Alassane promet la livraison d'un service à ses clients mais ne tient jamais ses délais. Il perd peu à peu toute sa réputation. Quelle valeur lui manque ?", options: ["Manque de fiabilité (ne pas tenir ses engagements)", "Manque d'argent", "Mauvaise qualité", "Prix élevés"], correct: "Manque de fiabilité (ne pas tenir ses engagements)", explanation: "L'intégrité et la fiabilité sont des capitaux immatériels. Cause n°85. REX : un réparateur de téléphone à Abobo a vu son activité exploser après avoir toujours tenu ses promesses.", tip: "Tenez un agenda simple et ne prenez que les engagements que vous pouvez honorer." },
+        { thematic: "Mentalité", question: "Fanta passe des heures sur les réseaux sociaux à regarder la vie des autres, sans jamais agir pour elle-même. Elle se sent démunie. Quelle cause sous-jacente ?", options: ["Dispersion et manque de focus", "Manque de téléphone", "Manque de talents", "Mauvaise connexion"], correct: "Dispersion et manque de focus", explanation: "La dispersion d'énergie empêche l'action concrète. Sagesse n°2 : ce que tu répètes chaque jour construit ta réalité financière.", tip: "Bloquez 1h par jour sans écran pour planifier et agir." },
+        { thematic: "Finances", question: "Dramane a gagné 2 millions FCFA à la loterie. En trois mois, tout a été dépensé en champagne et cadeaux. Aucun investissement. Quelle erreur typique ?", options: ["Absence d'éducation financière et impulsivité", "Manque de chance", "Trop de famille", "Mauvaise banque"], correct: "Absence d'éducation financière et impulsivité", explanation: "L'argent mal géré repart aussi vite qu'il vient. Cause n°26 : mauvaise gestion financière. REX : un gagnant à San Pedro a perdu toute sa fortune en 6 mois.", tip: "Quand un gain arrive, immobilisez 70% sur un compte bloqué 6 mois." },
+        { thematic: "Compétences", question: "Christelle gère un salon de coiffure mais ne sait pas utiliser un logiciel de gestion des rendez-vous. Elle double les bookings, perd des clientes. Quelle carence ?", options: ["Manque de compétences en gestion de projet / outils", "Manque de ciseaux", "Mauvaise localisation", "Mauvais produits"], correct: "Manque de compétences en gestion de projet / outils", explanation: "Les outils numériques simples augmentent l'efficacité. Cause n°51 : manque de compétences en gestion de projet.", tip: "Utilisez Google Agenda ou un simple carnet partagé pour éviter les doublons." },
+        { thematic: "Relations", question: "Souleymane ne supporte aucune critique et s'isole dès qu'on lui donne un conseil. Il refuse tout mentor. Quel frein relationnel ?", options: ["Manque d'humilité et refus de se remettre en question", "Mauvaise famille", "Manque d'argent", "Mauvais lieu"], correct: "Manque d'humilité et refus de se remettre en question", explanation: "L'orgueil coupe des opportunités d'apprentissage. Cause n°13 : manque d'humilité. REX : un entrepreneur à Korhogo a doublé son chiffre après avoir accepté un mentor.", tip: "Cherchez un mentor qui a réussi dans votre domaine. Écoutez sans vous défendre." },
+        { thematic: "Organisation", question: "Lydia n'a pas de planning pour son entreprise de traiteur. Elle accepte toutes les commandes sans visibilité, finit par en refuser par épuisement. Que manque-t-il ?", options: ["Planification stratégique et priorisation", "Trop de clients", "Manque de cuisiniers", "Mauvaise cuisine"], correct: "Planification stratégique et priorisation", explanation: "Sans planification, on subit l'urgence. Cause n°107 : mauvaise priorisation des tâches. REX : une traiteuse à Yopougon a mis en place un tableau de bord hebdomadaire et augmenté sa rentabilité.", tip: "Chaque dimanche, planifiez vos 3 priorités absolues pour la semaine." },
+        { thematic: "Santé", question: "Kader mange principalement de la nourriture industrielle, boit beaucoup de soda, ne fait jamais d'exercice. Il est souvent malade et absent de son travail. Quel impact direct ?", options: ["Mauvaise alimentation et manque d'activité physique", "Manque d'argent", "Mauvaise génétique", "Stress"], correct: "Mauvaise alimentation et manque d'activité physique", explanation: "La santé est un capital. Cause n°116 et 117. REX : un vendeur de rue a repris l'énergie après avoir marché 30 min par jour et réduit les sucres.", tip: "Marchez 20 minutes chaque jour et buvez de l'eau pure. Votre productivité augmentera." },
+        // 31-40 : Complément avec des cas issus des causes profondes (valeurs, organisation, etc.)
+        { thematic: "Valeurs", question: "Firmin ne paye pas ses employés à la date convenue, retient les salaires. Ses meilleurs éléments le quittent. Quelle faille éthique ?", options: ["Injustice / manque d'intégrité", "Manque d'argent", "Mauvaise gestion", "Trop de charges"], correct: "Injustice / manque d'intégrité", explanation: "L'injustice détruit la confiance et la baraka. Cause n°77. REX : un restaurateur réputé a fermé faute de personnel fiable à cause des retards de salaire.", tip: "Payez toujours vos employés le jour convenu. C'est un investissement en fidélité." },
+        { thematic: "Organisation", question: "Lucien fait tout lui-même : vente, livraison, comptabilité, accueil. Il est épuisé et son affaire ne grossit pas. Quel principe enfreint-il ?", options: ["Absence de délégation et de système", "Manque de courage", "Manque de clients", "Mauvais produits"], correct: "Absence de délégation et de système", explanation: "Vouloir tout faire limite la croissance. Cause n°102 et 103. REX : un boulanger a embauché un apprenti et libéré du temps pour développer.", tip: "Déléguez les tâches répétitives (livraison, ménage) dès que possible. Votre temps est précieux." },
+        { thematic: "Mentalité", question: "Nadège a peur de demander une augmentation à son patron ou de négocier ses prix. Elle sous‑évalue son travail. Quelle faiblesse mentale ?", options: ["Peur du jugement et manque d'estime de soi", "Manque de compétences", "Mauvais patron", "Manque de diplômes"], correct: "Peur du jugement et manque d'estime de soi", explanation: "Ne pas oser demander sa valeur est une cause de pauvreté. Cause n°10. REX : une secrétaire a osé demander une hausse de 30% et l'a obtenue.", tip: "Entraînez-vous à dire votre prix devant un miroir. Votre travail a de la valeur." },
+        { thematic: "Santé", question: "Blaise fume et boit beaucoup, consacre 60 000 FCFA par mois à l'alcool. Il a souvent des absences. Quel impact direct sur sa richesse ?", options: ["Addictions / excès (écrans, alcool)", "Manque d'argent", "Mauvais emploi", "Mauvaise famille"], correct: "Addictions / excès (écrans, alcool)", explanation: "Les addictions grignotent les revenus et la santé. Cause n°118. REX : un chauffeur a économisé 100 000 FCFA par mois en arrêtant l'alcool, puis a acheté sa propre voiture.", tip: "Remplacez l'alcool par une activité sportive ou une épargne forcée." },
+        { thematic: "Relations", question: "Joséphine ne consulte jamais d'autres entrepreneurs. Elle agit en vase clos, rate des synergies. Quelle carence sociale ?", options: ["Manque de collaboration et de partenariat", "Manque d'ambition", "Manque d'argent", "Mauvaise réputation"], correct: "Manque de collaboration et de partenariat", explanation: "La collaboration multiplie les forces. Cause n°74. REX : deux vendeuses de poulet ont uni leurs commandes pour acheter en gros et baisser les coûts.", tip: "Rejoignez un groupe d'entraide professionnel (WhatsApp, association)." },
+        { thematic: "Spiritualité", question: "Ousmane investit dans des activités clairement haram (trafics). Il gagne vite mais perd toujours tout ensuite. Quelle loi spirituelle ?", options: ["Perte de baraka par illicéité", "Manque de stratégie", "Mauvais associés", "Concurrence"], correct: "Perte de baraka par illicéité", explanation: "L'argent illicite n'a pas de bénédiction. Cause n°101 : oublier la finalité. REX : un commerçant a quitté la vente d'alcool pour la vente de fruits, ses revenus sont devenus stables et bénis.", tip: "Recherchez des sources de revenus halal et tayyib. La baraka est dans la pureté." },
+        { thematic: "Compétences", question: "Guy ne sait pas utiliser Excel pour suivre ses stocks. Il commande trop ou pas assez, perd des ventes. Quel apprentissage urgent ?", options: ["Bases en informatique / tableur", "Embaucher un gérant", "Réduire l'activité", "Changer de fournisseur"], correct: "Bases en informatique / tableur", explanation: "Les outils numériques de base sont devenus indispensables. Cause n°54. REX : un détaillant a suivi un cours gratuit sur Excel en ligne et réduit ses pertes de stock de 50%.", tip: "Regardez un tutoriel de 30 min sur YouTube : 'Excel pour débutants'." },
+        { thematic: "Organisation", question: "Edwige travaille toujours dans l'urgence, répond au téléphone toute la journée sans prioriser. À la fin du mois, les tâches importantes ne sont pas faites. Quel dysfonctionnement ?", options: ["Mauvaise priorisation stratégique", "Manque de clients", "Trop de fournisseurs", "Manque de matériel"], correct: "Mauvaise priorisation stratégique", explanation: "L'urgent tue l'important. Cause n°107. REX : une gérante de boutique a dédié 2h chaque matin aux tâches stratégiques (achats, marketing) et son CA a bondi.", tip: "Utilisez la matrice d'Eisenhower : urgent/important. Faites d'abord l'important non urgent." },
+        { thematic: "Mentalité", question: "Koffi répète sans cesse 'je suis pauvre, je n'y arriverai jamais'. Cette phrase devient réalité. Quelle loi psychologique ?", options: ["Le pouvoir des croyances limitantes", "Manque d'argent", "Manque d'éducation", "Mauvaise famille"], correct: "Le pouvoir des croyances limitantes", explanation: "La pauvreté commence dans l'esprit avant le portefeuille (Sagesse n°1). REX : un vendeur a changé son discours intérieur, visualisé sa réussite et attiré des opportunités.", tip: "Remplacez 'je suis pauvre' par 'je construis ma richesse chaque jour'." },
+        { thematic: "Valeurs", question: "Simone parle sans cesse de ses projets à tout le monde, y compris à ses concurrents. Avant même de démarrer, ses idées sont copiées. Quelle erreur ?", options: ["Manque de discrétion stratégique", "Manque d'argent", "Manque d'innovation", "Mauvais entourage"], correct: "Manque de discrétion stratégique", explanation: "Le silence protège les projets, le bruit les affaiblit (Sagesse n°12). REX : un innovateur à Abidjan a gardé le secret jusqu'au lancement et a dominé le marché.", tip: "Parlez de vos projets uniquement à des mentors fiables, après les avoir protégés." },
+        // 41-50 : Dernières questions pour atteindre 50 (synthèse)
+        { thematic: "Finances", question: "Armand investit dans des cryptomonnaies sans rien comprendre, sur des conseils non vérifiés. Il perd la moitié de ses économies. Quelle règle enfreint-il ?", options: ["Investir sans comprendre", "Manque de chance", "Mauvaise banque", "Trop de taxes"], correct: "Investir sans comprendre", explanation: "Investir sans connaissance est une forme de jeu. Cause n°39. REX : un épargnant a préféré acheter un petit terrain (actif réel) et a vu sa valeur augmenter.", tip: "N'investissez que dans ce que vous comprenez. Préférez les valeurs sûres (terre, or, formation)." },
+        { thematic: "Mentalité", question: "Lassana veut devenir riche en 15 jours, il change constamment de méthode (vente pyramidale, loterie). Résultat : il perd son temps et son argent. Quelle dérive ?", options: ["Mentalité court terme / cherche gain rapide", "Manque de chance", "Mauvais conseiller", "Trop d'ambition"], correct: "Mentalité court terme / cherche gain rapide", explanation: "La richesse durable est lente, la pauvreté peut être rapide. Sagesse n°9. REX : un jeune a arrêté les paris, investi dans une machine à coudre, et gagne maintenant régulièrement.", tip: "Construisez des actifs réels étape par étape. La patience paie." },
+        { thematic: "Spiritualité", question: "Rokia a une boutique prospère mais elle est avare, ne donne jamais aux pauvres. Peu à peu, ses ventes baissent sans raison. Selon la baraka, que lui manque-t-il ?", options: ["Avidité excessive et absence de partage", "Manque de stock", "Mauvais emplacement", "Concurrence déloyale"], correct: "Avidité excessive et absence de partage", explanation: "L'avarice bloque la bénédiction. Cause n°80 : avidité excessive. REX : une commerçante à Adjamé a commencé à donner un peu de nourriture chaque semaine, ses affaires ont repris.", tip: "Donnez régulièrement, ne serait-ce qu'un petit montant. La baraka vient du partage." },
+        { thematic: "Compétences", question: "Mamadou tient un atelier de réparation de téléphones mais ne connaît pas les nouvelles technologies (batteries, écrans OLED). Ses clients vont ailleurs. Quelle carence ?", options: ["Manque de veille technologique et formation", "Manque d'outils", "Mauvais local", "Prix trop élevés"], correct: "Manque de veille technologique et formation", explanation: "Se former en continu est vital. Cause n°42. REX : un réparateur à Yopougon a suivi des formations YouTube sur les nouvelles gammes et a regagné des clients.", tip: "Abonnez-vous à des blogs ou chaînes techniques de votre domaine." },
+        { thematic: "Organisation", question: "Fatoumata n'utilise aucun fichier client. Elle perd le suivi de ses bonnes payeuses, aucune relance. Elle perd des recettes. Que doit-elle instaurer ?", options: ["Base de données client simple (Excel, carnet)", "Engager un commercial", "Baisser ses prix", "Changer de métier"], correct: "Base de données client simple (Excel, carnet)", explanation: "Un suivi client est indispensable pour la fidélisation. Cause n°105 : absence de structuration. REX : une esthéticienne a doublé son chiffre en relançant ses anciennes clientes.", tip: "Créez un fichier avec nom, contact, date dernier achat. Relancez tous les 3 mois." },
+        { thematic: "Relations", question: "Rachid ne remercie jamais ses fournisseurs, il les presse et les insulte. Ses livraisons deviennent aléatoires. Quel manque relationnel ?", options: ["Manque d'intelligence relationnelle et gratitude", "Manque d'argent", "Mauvais fournisseurs", "Concurrence"], correct: "Manque d'intelligence relationnelle et gratitude", explanation: "Les bonnes relations sont un capital. Cause n°71. REX : un restaurateur a sécurisé ses approvisionnements en étant courtois et ponctuel.", tip: "Remerciez vos partenaires, soyez fiable. Les relations construisent la richesse." },
+        { thematic: "Santé", question: "Aïcha travaille sans repos, ne dort que 4h par nuit. Elle accumule les erreurs et sa santé se dégrade. Quel déséquilibre ?", options: ["Manque de repos de qualité / burnout", "Manque de formation", "Mauvaise organisation", "Trop de travail"], correct: "Manque de repos de qualité / burnout", explanation: "Le surmenage réduit la productivité. Cause n°119. REX : une cheffe d'entreprise a instauré des nuits de 7h et a augmenté sa clarté mentale.", tip: "Dormez 7 à 8h. Le repos est un investissement de performance." },
+        { thematic: "Finances", question: "Bamba n'a aucun investissement, il garde tout son argent en liquide sous le matelas. L'inflation grignote son pouvoir d'achat. Quelle erreur ?", options: ["Absence d'investissement / peur du risque", "Manque d'épargne", "Manque de revenus", "Trop de dépenses"], correct: "Absence d'investissement / peur du risque", explanation: "L'argent dormant perd de sa valeur. Cause n°25 : absence d'investissement. REX : un petit commerçant a investi dans des marchandises de saison et multiplié son capital.", tip: "Investissez au moins 10% de vos revenus dans un actif qui prend de la valeur ou génère du cash." },
+        { thematic: "Valeurs", question: "Bénédicte ment sur la qualité de ses produits (contrefaçon). Elle fait du chiffre mais sa réputation est détestable. Quel vice profond ?", options: ["Mensonge et manque d'intégrité", "Manque de marketing", "Prix trop bas", "Mauvais fournisseur"], correct: "Mensonge et manque d'intégrité", explanation: "L'intégrité construit la richesse durable. Cause n°76. REX : un quincaillier à Abidjan a perdu tous ses clients après avoir vendu du faux ciment.", tip: "La confiance met des années à se gagner et des secondes à se perdre. Soyez irréprochable." },
+        { thematic: "Spiritualité", question: "Daouda néglige la prière de l'aube et se plaint que son travail ne rapporte pas assez. Selon la sagesse islamique, quel pilier renforcer ?", options: ["Tawakkul (confiance) et régularité dans l'adoration", "Travailler plus d'heures", "Changer de métier", "Emprunter de l'argent"], correct: "Tawakkul (confiance) et régularité dans l'adoration", explanation: "La connexion spirituelle attire la baraka. Cause n°93 : manque de tawakkul. REX : un ouvrier a régularisé ses prières et obtenu une promotion inattendue.", tip: "Accomplissez vos prières avec sérénité, la subsistance suit la dévotion." }
     ];
-    allQuestions.push(...additionalScenarios);
-    // compléter jusqu'à 50 si besoin (on a déjà environ 14+7+4 = 25, il manque 25. On va dupliquer avec variations mais pour l'exercice on va générer des questions supplémentaires rapidement)
-    // On va créer un générateur automatique à partir des causes du README pour garantir 50.
-    while(allQuestions.length < 50) {
-        allQuestions.push({
-            thematic: themesList[allQuestions.length % themesList.length],
-            question: `Cas pratique ${allQuestions.length+1} : Manque de vision à long terme. Un petit commerçant d'Abidjan ne prévoit jamais au-delà de la semaine. Il ne se fixe aucun objectif annuel. Quelle cause profonde le freine ?`,
-            options: ["Absence de vision long terme", "Manque de stock", "Problèmes familiaux", "Prix élevés"],
-            correct: "Absence de vision long terme",
-            explanation: "Sans vision, on subit les événements. Sagesse n°5 : Sans vision, les opportunités deviennent invisibles. REX : des entrepreneurs de Yopougon ont créé un tableau de vision 5 ans et multiplié leurs revenus.",
-            tip: "Écrivez votre projet sur 3 ans, découpez en étapes annuelles."
-        });
-    }
-    // s'assurer que chaque question a bien la structure
-    const FINAL_QUESTIONS = allQuestions.slice(0,50);
-    
-    // Variables globales du quiz
-    let userAnswers = new Array(50).fill(null);
+
+    // S'assurer qu'on a exactement 50 questions (le tableau ci-dessus en contient 50)
+    console.log("Nombre de questions chargées :", QUESTIONS.length);
+    const TOTAL_QS = QUESTIONS.length;
+    document.getElementById("totalQ").innerText = TOTAL_QS;
+
+    // Variables du quiz
+    let userAnswers = new Array(TOTAL_QS).fill(null);
     let currentIndex = 0;
     let score = 0;
-    let answered = new Array(50).fill(false);
-    
-    const total = FINAL_QUESTIONS.length;
-    document.getElementById("totalQ").innerText = total;
-    
+
     function updateProgressAndCounter() {
         document.getElementById("currentQNumber").innerText = currentIndex+1;
-        const percent = ((currentIndex+1)/total)*100;
+        const percent = ((currentIndex+1)/TOTAL_QS)*100;
         document.getElementById("quizProgress").style.width = `${percent}%`;
         document.getElementById("liveScore").innerText = score;
     }
-    
+
     function renderCurrentQuestion() {
-        const q = FINAL_QUESTIONS[currentIndex];
+        const q = QUESTIONS[currentIndex];
         document.getElementById("questionText").innerText = q.question;
         document.getElementById("thematicLabel").innerHTML = `<i class="fas fa-tag me-1"></i> ${q.thematic}`;
         const optionsDiv = document.getElementById("optionsArea");
         optionsDiv.innerHTML = "";
+        // mélange des options
         const shuffled = [...q.options];
         for (let i = shuffled.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
@@ -396,7 +401,6 @@ This is a complete, ready-to-run HTML document that generates an interactive 50-
             document.getElementById("tipDetail").innerHTML = `<i class="fas fa-lightbulb me-2"></i> Conseil & REX : ${q.tip || "Appliquez immédiatement une action correctrice."}`;
         } else {
             explDiv.style.display = "none";
-            // reset styles
             document.querySelectorAll(".option-btn").forEach(btn => {
                 btn.classList.remove("correct","incorrect");
                 btn.disabled = false;
@@ -407,7 +411,7 @@ This is a complete, ready-to-run HTML document that generates an interactive 50-
         document.getElementById("prevBtn").disabled = (currentIndex === 0);
         const nextBtn = document.getElementById("nextBtn");
         const finishBtn = document.getElementById("finishBtn");
-        if(currentIndex === total-1) {
+        if(currentIndex === TOTAL_QS-1) {
             nextBtn.classList.add("d-none");
             finishBtn.classList.remove("d-none");
         } else {
@@ -415,7 +419,7 @@ This is a complete, ready-to-run HTML document that generates an interactive 50-
             finishBtn.classList.add("d-none");
         }
     }
-    
+
     function highlightAnswerOptions(isCorrect, selected, correctAns) {
         const btns = document.querySelectorAll(".option-btn");
         btns.forEach(btn => {
@@ -424,10 +428,10 @@ This is a complete, ready-to-run HTML document that generates an interactive 50-
             if(btn.innerText === selected && !isCorrect) btn.classList.add("incorrect");
         });
     }
-    
+
     function handleAnswer(selectedOpt) {
         if (userAnswers[currentIndex] !== null) return;
-        const q = FINAL_QUESTIONS[currentIndex];
+        const q = QUESTIONS[currentIndex];
         const isCorrect = (selectedOpt === q.correct);
         if (isCorrect) {
             score++;
@@ -441,9 +445,9 @@ This is a complete, ready-to-run HTML document that generates an interactive 50-
         document.getElementById("tipDetail").innerHTML = `<i class="fas fa-lightbulb me-2"></i> Conseil & REX : ${q.tip || "Identifiez une action immédiate à appliquer cette semaine."}`;
         highlightAnswerOptions(isCorrect, selectedOpt, q.correct);
     }
-    
+
     function nextQuestion() {
-        if (currentIndex < total-1) {
+        if (currentIndex < TOTAL_QS-1) {
             currentIndex++;
             renderCurrentQuestion();
         }
@@ -456,10 +460,10 @@ This is a complete, ready-to-run HTML document that generates an interactive 50-
     }
     function finishQuiz() {
         const finalScore = score;
-        const percent = (finalScore/total)*100;
+        const percent = (finalScore/TOTAL_QS)*100;
         document.getElementById("finalPercent").innerText = `${Math.round(percent)}%`;
         document.getElementById("finalCorrect").innerText = finalScore;
-        document.getElementById("finalTotal").innerText = total;
+        document.getElementById("finalTotal").innerText = TOTAL_QS;
         document.getElementById("finalBar").style.width = `${percent}%`;
         let insight = "";
         if (percent >= 80) insight = "Excellent ! Vous maîtrisez les causes profondes de la pauvreté et avez une feuille de route claire. Passez à l’action immédiate.";
@@ -469,16 +473,15 @@ This is a complete, ready-to-run HTML document that generates an interactive 50-
         const modal = new bootstrap.Modal(document.getElementById("resultModal"));
         modal.show();
     }
-    
+
     document.getElementById("nextBtn").addEventListener("click", nextQuestion);
     document.getElementById("prevBtn").addEventListener("click", prevQuestion);
     document.getElementById("finishBtn").addEventListener("click", finishQuiz);
     document.getElementById("restartQuizBtn").addEventListener("click", () => {
         window.location.reload();
     });
-    
+
     renderCurrentQuestion();
 </script>
 </body>
 </html>
-```
