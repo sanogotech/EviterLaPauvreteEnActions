@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Guide Pas à Pas : Éviter la Pauvreté – Causes profondes, REX & Bonnes pratiques</title>
+    
+    <!-- Bootstrap 5 + Icons + Google Fonts -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #2b7a4b;
+            --primary-dark: #1e5a38;
+            --secondary: #f3b33d;
+            --accent: #e76f51;
+            --light-bg: #fefcf5;
+            --card-bg: #ffffff;
+            --text-dark: #2d3e2b;
+            --gray-mid: #f0f2f5;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(145deg, #eef3e9 0%, #e2e9dc 100%);
+            color: #1e2f1c;
+            scroll-behavior: smooth;
+        }
+        .hero-guide {
+            background: linear-gradient(135deg, #1f3b2c 0%, #2b5a3a 100%);
+            border-radius: 0 0 2rem 2rem;
+            padding: 2rem 1.5rem;
+            margin-bottom: 2rem;
+            color: white;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        .hero-guide h1 {
+            font-weight: 800;
+            font-size: 2.2rem;
+        }
+        .nav-tabs-custom {
+            border-bottom: 2px solid #dee2e6;
+            margin-bottom: 1.8rem;
+            flex-wrap: wrap;
+        }
+        .nav-tabs-custom .nav-link {
+            font-weight: 600;
+            color: var(--primary-dark);
+            border: none;
+            padding: 0.75rem 1.2rem;
+            margin-right: 0.5rem;
+            border-radius: 40px;
+            transition: 0.2s;
+            background: transparent;
+        }
+        .nav-tabs-custom .nav-link:hover {
+            background: #e9ecef;
+            color: var(--primary);
+        }
+        .nav-tabs-custom .nav-link.active {
+            background: var(--primary);
+            color: white;
+            box-shadow: 0 5px 10px rgba(43,122,75,0.2);
+        }
+        .card-hover {
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: none;
+            border-radius: 1.2rem;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        .badge-category {
+            background: #eef2ff;
+            color: var(--primary-dark);
+            padding: 0.3rem 0.8rem;
+            border-radius: 30px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        .glossary-term {
+            font-weight: 700;
+            color: var(--primary);
+            border-bottom: 1px dashed var(--secondary);
+            cursor: help;
+        }
+        .rex-card {
+            border-left: 5px solid var(--secondary);
+            background: #fffef7;
+        }
+        .tip-badge {
+            background: var(--secondary);
+            color: #2d3e2b;
+            font-weight: 600;
+            padding: 0.2rem 0.7rem;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            display: inline-block;
+        }
+        .footer {
+            background: #1e2f1c;
+            color: #ccc;
+            border-radius: 1.5rem 1.5rem 0 0;
+            margin-top: 3rem;
+            padding: 1.5rem;
+            text-align: center;
+        }
+        .list-check {
+            list-style: none;
+            padding-left: 0;
+        }
+        .list-check li {
+            margin-bottom: 0.6rem;
+        }
+        .list-check li i {
+            color: var(--primary);
+            margin-right: 0.6rem;
+        }
+        .cause-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1rem;
+        }
+        @media (max-width: 768px) {
+            .hero-guide h1 { font-size: 1.6rem; }
+            .nav-tabs-custom .nav-link { padding: 0.5rem 0.8rem; font-size: 0.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container-lg py-3">
+    <!-- Hero -->
+    <div class="hero-guide text-center">
+        <div class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> Guide interactif – Côte d’Ivoire & Afrique</div>
+        <h1><i class="fas fa-seedling me-2"></i>Éviter la Pauvreté : Guide Pas à Pas</h1>
+        <p class="mt-2">120 causes profondes, sagesses puissantes, REX terrain, bonnes pratiques et glossaire.<br>Transformez votre mentalité, vos finances et votre baraka.</p>
+        <div class="mt-3"><i class="fas fa-lightbulb text-warning"></i> “Ce n’est pas ce que tu gagnes qui te rend riche… c’est ce que tu deviens.”</div>
+    </div>
+
+    <!-- Onglets (8) -->
+    <div class="bg-white rounded-4 shadow-sm p-4">
+        <ul class="nav nav-tabs-custom" id="guideTab" role="tablist">
+            <li class="nav-item" role="presentation"><button class="nav-link active" id="tab1-tab" data-bs-toggle="tab" data-bs-target="#tab1" type="button" role="tab">📘 1. Vision & Intro</button></li>
+            <li class="nav-item" role="presentation"><button class="nav-link" id="tab2-tab" data-bs-toggle="tab" data-bs-target="#tab2" type="button" role="tab">⚠️ 2. 120 causes (résumé)</button></li>
+            <li class="nav-item" role="presentation"><button class="nav-link" id="tab3-tab" data-bs-toggle="tab" data-bs-target="#tab3" type="button" role="tab">✨ 3. Sagesses & Clés</button></li>
+            <li class="nav-item" role="presentation"><button class="nav-link" id="tab4-tab" data-bs-toggle="tab" data-bs-target="#tab4" type="button" role="tab">🔁 4. 10 REX (retours terrain)</button></li>
+            <li class="nav-item" role="presentation"><button class="nav-link" id="tab5-tab" data-bs-toggle="tab" data-bs-target="#tab5" type="button" role="tab">✅ 5. Bonnes / Mauvaises pratiques</button></li>
+            <li class="nav-item" role="presentation"><button class="nav-link" id="tab6-tab" data-bs-toggle="tab" data-bs-target="#tab6" type="button" role="tab">📚 6. État de l’art & Définitions</button></li>
+            <li class="nav-item" role="presentation"><button class="nav-link" id="tab7-tab" data-bs-toggle="tab" data-bs-target="#tab7" type="button" role="tab">❓ 7. Questions clés (FAQ)</button></li>
+            <li class="nav-item" role="presentation"><button class="nav-link" id="tab8-tab" data-bs-toggle="tab" data-bs-target="#tab8" type="button" role="tab">📖 8. Glossaire & Ressources</button></li>
+        </ul>
+        
+        <div class="tab-content pt-3">
+            <!-- 1. Vision & Intro -->
+            <div class="tab-pane fade show active" id="tab1" role="tabpanel">
+                <h3><i class="fas fa-bullseye me-2 text-primary"></i>Comprendre la pauvreté systémique</h3>
+                <p>La pauvreté n’est pas qu’un manque d’argent. C’est un <strong>système complexe</strong> de causes invisibles : mental, habitudes, compétences, relations, organisation et spiritualité (baraka).</p>
+                <div class="row mt-4">
+                    <div class="col-md-6">
+                        <div class="card card-hover h-100 p-3">
+                            <i class="fas fa-brain fa-2x text-primary mb-2"></i>
+                            <h5>3 vérités essentielles</h5>
+                            <ul class="list-check">
+                                <li><i class="fas fa-check-circle"></i> La pauvreté est rarement un hasard : cumul silencieux d’erreurs.</li>
+                                <li><i class="fas fa-check-circle"></i> Les causes sont interconnectées (mauvais entourage → mauvaises décisions).</li>
+                                <li><i class="fas fa-check-circle"></i> Corriger une cause peut créer un effet levier puissant.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card card-hover h-100 p-3">
+                            <i class="fas fa-chalkboard-user fa-2x text-secondary mb-2"></i>
+                            <h5>Méthode d’auto-diagnostic</h5>
+                            <p>1. Lis chaque cause honnêtement.<br>2. Note-toi (0 = pas concerné, 2 = beaucoup).<br>3. Identifie tes 5 faiblesses majeures.<br>4. Corrige-les en priorité.</p>
+                            <div class="alert alert-light mt-2"><i class="fas fa-gem"></i> Richesse durable = Clarté + discipline + savoir + réseau + systèmes + spiritualité.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-3 p-3 bg-light rounded">
+                    <i class="fas fa-quote-left me-2"></i> <strong>Vision globale</strong> : Pauvreté = manque de vision + mauvaises habitudes + faibles compétences + mauvais choix + absence de baraka.
+                </div>
+            </div>
+
+            <!-- 2. Les 120 causes (résumé par catégories) -->
+            <div class="tab-pane fade" id="tab2" role="tabpanel">
+                <h3><i class="fas fa-list-ul me-2"></i>Les 120 causes profondes – catégories clés</h3>
+                <p>Inspiré de l’état de l’art et des réalités ivoiriennes. Voici les principaux blocages regroupés.</p>
+                <div class="cause-grid mt-3">
+                    <div class="card border-0 shadow-sm p-3"><h6><i class="fas fa-brain text-primary"></i> Mentalité (23 causes)</h6><small>Paresse, procrastination, manque de vision long terme, peur de l’échec, impulsivité, absence de stratégie…</small></div>
+                    <div class="card border-0 shadow-sm p-3"><h6><i class="fas fa-coins text-success"></i> Finances (18 causes)</h6><small>Absence d’épargne, dettes, dépendance à une source de revenu, mauvaise gestion, pas de fonds d’urgence.</small></div>
+                    <div class="card border-0 shadow-sm p-3"><h6><i class="fas fa-graduation-cap text-info"></i> Compétences (18 causes)</h6><small>Ne pas se former, ignorance des opportunités, manque de marketing, faible culture digitale, théorie sans action.</small></div>
+                    <div class="card border-0 shadow-sm p-3"><h6><i class="fas fa-users text-warning"></i> Relations (16 causes)</h6><small>Mauvais entourage, isolement, absence de mentors, mauvais choix d’associés, manque de collaboration.</small></div>
+                    <div class="card border-0 shadow-sm p-3"><h6><i class="fas fa-hand-sparkles text-danger"></i> Valeurs & comportements (16 causes)</h6><small>Mensonge, orgueil, jalousie, manque d’intégrité, non-respect des engagements.</small></div>
+                    <div class="card border-0 shadow-sm p-3"><h6><i class="fas fa-pray text-secondary"></i> Spiritualité (10 causes)</h6><small>Négliger la baraka, absence de gratitude, manque de tawakkul, attachement excessif au matériel.</small></div>
+                    <div class="card border-0 shadow-sm p-3"><h6><i class="fas fa-gear"></i> Organisation & systèmes (10 causes)</h6><small>Absence de processus, désorganisation, mauvaise priorisation, pas de KPI.</small></div>
+                    <div class="card border-0 shadow-sm p-3"><h6><i class="fas fa-heartbeat"></i> Hygiène de vie (9 causes)</h6><small>Manque d’énergie, sommeil excessif, mauvaise alimentation, addictions.</small></div>
+                </div>
+                <div class="alert alert-warning mt-3"><i class="fas fa-lightbulb"></i> <strong>Mémo Master</strong> : Pas de vision + pas de stratégie = errance. Pas d’actifs solides = fragilité financière. Faible spiritualité = perte de baraka.</div>
+            </div>
+
+            <!-- 3. Sagesses & Clés (21 sagesses) -->
+            <div class="tab-pane fade" id="tab3" role="tabpanel">
+                <h3><i class="fas fa-crown text-warning"></i> 21 sagesses puissantes</h3>
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul class="list-check">
+                            <li><i class="fas fa-gem"></i> La pauvreté commence dans l’esprit avant le portefeuille.</li>
+                            <li><i class="fas fa-gem"></i> Ce que tu répètes chaque jour construit ta réalité financière.</li>
+                            <li><i class="fas fa-gem"></i> La discipline bat toujours la motivation.</li>
+                            <li><i class="fas fa-gem"></i> L’argent amplifie ce que tu es déjà.</li>
+                            <li><i class="fas fa-gem"></i> Sans vision, même les opportunités deviennent invisibles.</li>
+                            <li><i class="fas fa-gem"></i> Celui qui ne sait pas gérer 10 ne saura pas gérer 1 000.</li>
+                            <li><i class="fas fa-gem"></i> Le mauvais entourage coûte plus cher que l’ignorance.</li>
+                            <li><i class="fas fa-gem"></i> La richesse durable est lente, la pauvreté peut être rapide.</li>
+                            <li><i class="fas fa-gem"></i> Apprendre sans appliquer est une illusion de progrès.</li>
+                            <li><i class="fas fa-gem"></i> Les petites dépenses répétées créent les grandes difficultés.</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="list-check">
+                            <li><i class="fas fa-gem"></i> Le silence protège les projets, le bruit les affaiblit.</li>
+                            <li><i class="fas fa-gem"></i> La constance transforme les faibles efforts en résultats puissants.</li>
+                            <li><i class="fas fa-gem"></i> Ne pas investir en soi est la pire perte.</li>
+                            <li><i class="fas fa-gem"></i> Les opportunités viennent déguisées en problèmes.</li>
+                            <li><i class="fas fa-gem"></i> L’humilité ouvre des portes que l’orgueil ferme.</li>
+                            <li><i class="fas fa-gem"></i> La gratitude attire plus que la plainte.</li>
+                            <li><i class="fas fa-gem"></i> Une mauvaise décision répétée devient une habitude dangereuse.</li>
+                            <li><i class="fas fa-gem"></i> Le temps mal utilisé est une richesse perdue.</li>
+                            <li><i class="fas fa-gem"></i> Les systèmes battent les efforts isolés.</li>
+                            <li><i class="fas fa-gem"></i> La baraka multiplie ce que les efforts seuls ne peuvent atteindre.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mt-3 text-center fst-italic">“Pensée → Actions → Habitudes → Résultats”</div>
+            </div>
+
+            <!-- 4. 10 REX (retours d’expérience) -->
+            <div class="tab-pane fade" id="tab4" role="tabpanel">
+                <h3><i class="fas fa-chalkboard-user"></i> 10 REX terrain & solutions</h3>
+                <div class="row g-3 mt-2">
+                    <div class="col-md-6"><div class="card rex-card p-3 h-100"><i class="fas fa-wallet"></i> <strong>REX 1 : “Je gagne bien mais finis à zéro”</strong><br>Problème : absence de gestion. ✅ Tip : règle 50/30/20, automatiser l’épargne.</div></div>
+                    <div class="col-md-6"><div class="card rex-card p-3 h-100"><i class="fas fa-clock"></i> <strong>REX 2 : “Je n’ai jamais le temps”</strong><br>Problème : mauvaise gestion du temps. ✅ Tip : planifier la veille, 3 priorités max/jour.</div></div>
+                    <div class="col-md-6"><div class="card rex-card p-3 h-100"><i class="fas fa-chart-line"></i> <strong>REX 3 : “J’ai échoué donc j’arrête”</strong><br>Problème : peur de l’échec. ✅ Tip : transformer l’échec en leçon écrite (REX hebdo).</div></div>
+                    <div class="col-md-6"><div class="card rex-card p-3 h-100"><i class="fas fa-users"></i> <strong>REX 4 : “Entouré mais je n’avance pas”</strong><br>Problème : mauvais entourage. ✅ Tip : auditer ses 5 proches, rejoindre un groupe ambitieux.</div></div>
+                    <div class="col-md-6"><div class="card rex-card p-3 h-100"><i class="fas fa-book"></i> <strong>REX 5 : “Je consomme du contenu sans changement”</strong><br>Problème : accumulation sans action. ✅ Règle 70% action / 30% théorie.</div></div>
+                    <div class="col-md-6"><div class="card rex-card p-3 h-100"><i class="fas fa-chart-simple"></i> <strong>REX 6 : “Mon business ne décolle pas”</strong><br>Problème : manque compétences business. ✅ Apprendre vendre + marketing + finance.</div></div>
+                    <div class="col-md-6"><div class="card rex-card p-3 h-100"><i class="fas fa-robot"></i> <strong>REX 7 : “Je recommence à zéro”</strong><br>Problème : absence de système. ✅ Documenter et automatiser (checklists).</div></div>
+                    <div class="col-md-6"><div class="card rex-card p-3 h-100"><i class="fas fa-comment-dots"></i> <strong>REX 8 : “Je parle trop de mes projets”</strong><br>Problème : dispersion d’énergie. ✅ Parler peu, agir beaucoup, partager après résultats.</div></div>
+                    <div class="col-md-6"><div class="card rex-card p-3 h-100"><i class="fas fa-gauge-high"></i> <strong>REX 9 : “Je veux aller vite mais je stagne”</strong><br>Problème : impatience stratégique. ✅ Penser long terme (3-5 ans), mesurer progrès mensuel.</div></div>
+                    <div class="col-md-6"><div class="card rex-card p-3 h-100"><i class="fas fa-hand-sparkles"></i> <strong>REX 10 : “Je travaille dur sans bénédiction”</strong><br>Problème : déséquilibre spirituel. ✅ Renforcer gratitude + istighfar + sadaqa.</div></div>
+                </div>
+                <div class="mt-3 alert alert-success"><i class="fas fa-check-circle"></i> Chaque REX est accompagné d’une bonne pratique : journal d’apprentissage, routine spirituelle, tableau de KPI, etc.</div>
+            </div>
+
+            <!-- 5. Bonnes pratiques / Mauvaises pratiques -->
+            <div class="tab-pane fade" id="tab5" role="tabpanel">
+                <h3><i class="fas fa-thumbs-up"></i> Bonnes pratiques vs <i class="fas fa-thumbs-down text-danger"></i> Mauvaises pratiques</h3>
+                <div class="row mt-3">
+                    <div class="col-md-6"><div class="card border-success p-3 h-100"><h5><i class="fas fa-check-circle text-success"></i> À faire (bonnes pratiques)</h5><ul><li>Épargner automatiquement 20% des revenus.</li><li>Suivre un mentor et lire 10 pages par jour.</li><li>Pratiquer la gratitude et la sadaqa régulièrement.</li><li>Auditionner son entourage chaque trimestre.</li><li>Utiliser des systèmes (checklists, planning).</li><li>Se former en continu (digital, marketing).</li></ul></div></div>
+                    <div class="col-md-6"><div class="card border-danger p-3 h-100"><h5><i class="fas fa-times-circle text-danger"></i> À éviter</h5><ul><li>Dépenser tout son salaire en loisirs.</li><li>Traîner avec des personnes négatives.</li><li>Ignorer ses dettes et ne pas tenir de comptes.</li><li>Attendre l’opportunité parfaite sans agir.</li><li>Négliger la prière ou la spiritualité.</li><li>Parler de ses projets à tout le monde.</li></ul></div></div>
+                </div>
+                <div class="mt-3 p-3 bg-warning bg-opacity-10 rounded"><i class="fas fa-star-of-life"></i> <strong>Règle d’or :</strong> “Ce n’est pas ce que tu gagnes qui te rend riche… c’est ce que tu deviens.”</div>
+            </div>
+
+            <!-- 6. État de l’art & Définitions -->
+            <div class="tab-pane fade" id="tab6" role="tabpanel">
+                <h3><i class="fas fa-microchip"></i> État de l’art anti-pauvreté & concepts clés</h3>
+                <p>Les approches modernes combinent éducation financière, entrepreneuriat inclusif, développement des soft skills et ancrage spirituel (baraka).</p>
+                <div class="row">
+                    <div class="col-md-4"><div class="card mb-2 p-2"><span class="glossary-term">Baraka</span> : Bénédiction divine qui multiplie les efforts et apporte la réussite durable.</div></div>
+                    <div class="col-md-4"><div class="card mb-2 p-2"><span class="glossary-term">Tawakkul</span> : Confiance en Allah après avoir pris les causes (moyens).</div></div>
+                    <div class="col-md-4"><div class="card mb-2 p-2"><span class="glossary-term">Chap Chap mindset</span> : Recherche de gain rapide sans stratégie, mène à la pauvreté.</div></div>
+                    <div class="col-md-4"><div class="card mb-2 p-2"><span class="glossary-term">Ikigai</span> : Alignement entre passion, mission, vocation et profession.</div></div>
+                    <div class="col-md-4"><div class="card mb-2 p-2"><span class="glossary-term">Effet levier</span> : Une petite correction (ex: discipline) transforme tout le système.</div></div>
+                    <div class="col-md-4"><div class="card mb-2 p-2"><span class="glossary-term">REX (Retour d’expérience)</span> : Analyse terrain pour capitaliser les leçons.</div></div>
+                </div>
+                <p class="mt-3"><strong>Bonnes pratiques reconnues :</strong> Budget 50/30/20, épargne d’urgence, diversification des revenus, networking, mentorat, gratitude quotidienne, istighfar.</p>
+            </div>
+
+            <!-- 7. Questions clés (FAQ) -->
+            <div class="tab-pane fade" id="tab7" role="tabpanel">
+                <h3><i class="fas fa-question-circle"></i> Questions clés pour l’auto-diagnostic</h3>
+                <div class="accordion" id="faqAccordion">
+                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#q1">🔍 Quelles sont mes 5 faiblesses majeures parmi les 120 causes ?</button></h2><div id="q1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion"><div class="accordion-body">Faites l’exercice : notez chaque cause de 0 à 2. Priorisez celles avec score 2. Ex: manque d’épargne, mauvais entourage, procrastination.</div></div></div>
+                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2">💰 Comment sortir du cycle dette / pauvreté ?</button></h2><div id="q2" class="accordion-collapse collapse"><div class="accordion-body">Méthode boule de neige (rembourser la plus petite dette), règle 50/30/20, augmenter ses revenus via une compétence complémentaire.</div></div></div>
+                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q3">🧠 Quel est le premier pas pour changer sa mentalité ?</button></h2><div id="q3" class="accordion-collapse collapse"><div class="accordion-body">Admettre que la pauvreté commence dans l’esprit. Lire une sagesse chaque matin, tenir un journal de gratitude et de progrès.</div></div></div>
+                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q4">🤝 Comment trouver un bon mentor ?</button></h2><div id="q4" class="accordion-collapse collapse"><div class="accordion-body">Participer à des associations professionnelles, oser demander un conseil, proposer de la valeur en échange (aide gratuite).</div></div></div>
+                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q5">🕋 Quel rôle joue la baraka dans la richesse ?</button></h2><div id="q5" class="accordion-collapse collapse"><div class="accordion-body">La baraka est une multiplication invisible. Elle s’acquiert par la gratitude, l’aumône, l’istighfar et la régularité dans les actes d’adoration.</div></div></div>
+                </div>
+                <div class="mt-4 p-3 bg-light rounded"><i class="fas fa-clipboard-list"></i> <strong>Auto-évaluation rapide :</strong> sur une échelle de 1 à 10, évaluez votre discipline, votre réseau, votre niveau de compétence, votre gestion financière et votre spiritualité.</div>
+            </div>
+
+            <!-- 8. Glossaire & Ressources -->
+            <div class="tab-pane fade" id="tab8" role="tabpanel">
+                <h3><i class="fas fa-book-open"></i> Glossaire complet & ressources</h3>
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><strong>Baraka</strong> : bénédiction divine, facteur de croissance invisible.</li>
+                            <li class="list-group-item"><strong>Tawakkul</strong> : confiance en Allah après avoir mis les moyens.</li>
+                            <li class="list-group-item"><strong>Istighfar</strong> : demande de pardon, attire la subsistance.</li>
+                            <li class="list-group-item"><strong>Sadaqa</strong> : aumône volontaire qui purifie l’argent.</li>
+                            <li class="list-group-item"><strong>Chap Chap</strong> : mentalité de l’urgence, ennemi de la richesse durable.</li>
+                            <li class="list-group-item"><strong>REX</strong> : retour d’expérience structuré.</li>
+                            <li class="list-group-item"><strong>KPI</strong> : indicateur de performance (ex: taux d’épargne).</li>
+                            <li class="list-group-item"><strong>Bounded context</strong> (issu de DDD) : frontière métier pour découper.</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card p-3"><i class="fas fa-link"></i> <strong>Ressources recommandées</strong><br>- Lecture : « 120 causes profondes » (guide complet)<br>- Outils : tableau de suivi 30/60/90 jours, application de budget (Linxo, Excel)<br>- Communauté : groupes WhatsApp d’entraide entrepreneuriale<br>- Formations : Google Atelier Digital, plateformes gratuites (OpenClassrooms, YouTube)</div>
+                    </div>
+                </div>
+                <div class="mt-3 alert alert-primary"><i class="fas fa-download"></i> <strong>Plan d’action 30 jours</strong> : Semaine 1 → discipline financière. Semaine 2 → audit entourage. Semaine 3 → formation (1 compétence). Semaine 4 → routine spirituelle (gratitude + istighfar).</div>
+            </div>
+        </div>
+    </div>
+    <div class="footer mt-4">
+        <i class="fas fa-seedling"></i> Guide anti-pauvreté – Basé sur 120 causes, sagesses et REX terrain. Transformez vos habitudes, attirez la baraka.
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
